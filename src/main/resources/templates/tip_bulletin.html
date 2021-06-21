@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--팁을 실질적으로 보여주는 페이지!-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black;}
+        h2{text-align:center; color:white;}
+        table {
+             text-align: center;
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse; 
+  }
+  th, td {
+    border: 1px solid #444444;
+    padding: 20px;
+    color:white;
+  }
+  p, div {
+      color:white;
+  }
+        body{background-color: black;}
+        div{text-align: center;
+            font-size:30px;
+            margin-top: 80px;
+        }
+        h1, p{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1 style="color:white;" th:text="${data.getTitle()}"></h1>
+    <p><span th:text="'캐릭터 : ' + ${data.getCh()}"></span> / <span th:text="'분류 : ' + ${data.getType()}"></span></p>
+    <div th:text="${data.getText()}"></div>
+</body>
+</html>

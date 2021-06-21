@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--팁 목록들을 보여주는 페이지 !-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black;}
+        h2{text-align:center; color:white;}
+        table {
+             text-align: center;
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse; 
+  }
+  th, td {
+    border: 1px solid #444444;
+    padding: 20px;
+    color:white;
+  }
+  p {
+      color:white;
+  }
+    </style>
+    <img src="/img/타이틀.jpg"style="margin-left:670px; height:300px;">
+</head>
+<body>
+<h4><a href="/tip/create">팁 등록하기</a> <a href="/tip/list">reload</a></h4>
+<form method="post" action="/tip/search/ch">
+    <p>캐릭터 검색 : <input type="text" id="ch" name="ch"> <input type="submit" value="검색"></p>
+</form>
+<form method="post" action="/tip/search/type">
+    <p>Type 검색 : <input type="text" id="type" name="type"> <input type="submit" value="검색"></p>
+</form>
+    <table>
+        <thead>
+          <tr>
+            <th>번호</th><th>제목</th><th>캐릭터</th><th>분류</th><th>삭제</th><th>수정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="data :  ${list}">
+            <td th:text="${data.getId()}"></td><td><a th:text="${data.getTitle()}" th:href="@{'/tip/view/' + ${data.getId()}}"></a></td><td th:text="${data.getCh()}"></td><td th:text="${data.getType()}"></td><td><a th:href="@{'/tip/delete/' + ${data.getId()}}">삭제</a></td> <td><a th:href="@{'/tip/modify/' + ${data.getId()}}">수정</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </body>
+  </html> 
+</body>
+</html>

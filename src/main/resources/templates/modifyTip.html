@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- 팁을 수정하기 위한 페이지!-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black; color:white;}
+        form{text-align: center;}
+    </style>
+</head>
+<body>
+<form method="post" action="/tip/modify">
+
+    <p>제목 : <input type="text" style="width: 300px; height: 30px;" id="title" name="title" th:value="${data.getTitle()}"> 캐릭터 : <input type="text" id="ch" name="ch" style="width: 300px; height: 30px;" th:value="${data.getCh()}"></p>
+    <p>분류 : <input type="text" id="type" name="type" style="width: 900px; height: 30px;" th:value="${data.getType()}"></p>
+    <p>내용 : <textarea cols="200" rows="50" id="context" name="context" th:text="${data.getText()}"></textarea></p>
+    <p><input type="submit" value="제출"></p>
+    <input type="hidden"  id="id" name="id" th:value="@{${data.getId()}}">
+    <!--hidden type을 이용해서 수정할 페이지의 id를 서버로 보냄 !-->
+
+</form>
+</body>
+</html>
+

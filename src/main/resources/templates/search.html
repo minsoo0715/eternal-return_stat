@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--검색 결과 페이지!-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과</title>
+    <link href="/css/search.css" rel="stylesheet">
+
+    <img src="/img/타이틀.jpg"style="margin-left:670px; height:300px; border-radius:0px">
+</head>
+<body>
+
+<form>
+    <p>
+        <input type="text" name="find" size="70" maxlength="60" placeholder="닉네임을 입력해주세요." required autofocus>
+        <!--<img src="검색 아이콘.png"> !-->
+    </p>
+</form>
+<h1><a th:href="@{${'/Users/refresh/' + user.getId()}}">갱신하기</a></h1>
+<h1 th:text="${user.getId()}"></h1>
+<h2 th:text="'승리 횟수 : ' + ${user.winCount} + ' 평균 순위 : ' + ${user.avgrank} + '  평균 킬 : ' + ${user.avgkill}"></h2>
+<div>
+    <h2>모스트</h2>
+
+    <div th:each="mostinfo : ${user.getMost()}">
+        <div>
+            <img th:src="@{${'/img/' + mostinfo.name + '.png' }}" height="100px;" width="100px;">
+            <p th:text="'이름 : ' + ${mostinfo.name}"></p>
+            <p th:text="'픽 횟수 : '+ ${mostinfo.count}"></p>
+            <p th:text="'top3 횟수 : ' + ${mostinfo.top3} "></p>
+        </div>
+    </div>
+
+
+    <h2>최근전적</h2>
+    <div th:each="statinfo : ${user.getMatch_data()}">
+    <div>
+        <img th:src="@{${'/img/' + statinfo.ch + '.png' }}" height="60px;" width="60px;">
+        <p th:text="'캐릭터 이름 : ' + ${statinfo.ch}"></p>
+        <p th:text="'레벨 : ' + ${statinfo.level}"></p>
+        <p th:text="'킬 : ' + ${statinfo.kill}"></p>
+        <p th:text="'등수 : ' + ${statinfo.rank}"></p>
+        <p th:text="'동물 킬 : ' + ${statinfo.anikill}"></p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

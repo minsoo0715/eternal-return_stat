@@ -1,0 +1,26 @@
+.Btn{
+    padding:20px;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 2em;
+    color: white;
+    text-decoration: inherit;
+
+}
+
+#MapImg{
+    margin-left:500px;
+    margin-top: 50px;
+    height:500px;
+}
+
+#title{
+    margin-left:670px;
+    height:300px;
+}
+body{background-color:black;}
+h1{color:white; text-align:center;}
+pre{color:white; font-size:40px;}
+div{text-align: center; margin-top: 50px;}
+input{height: 50px; text-align: left; font-size: 20px;}
+form{text-align: center;}
