@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 public class Match { //매치 기록 데이터를 받기 위한 클래스
     int level;

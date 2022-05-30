@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 public class Most { //많이 플레이한 캐릭터의 데이터를 위한 클래스
     String name;

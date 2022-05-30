@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 public class TipForm { //팁 입력시 폼데이터를 받아올 클래스
     private String title;

@@ -1,11 +1,11 @@
 package dimigo.EternalStat.controller;
 
-import dimigo.EternalStat.TipForm;
-import dimigo.EternalStat.TipModifyForm;
-import dimigo.EternalStat.chForm;
+import dimigo.EternalStat.dto.TipForm;
+import dimigo.EternalStat.dto.TipModifyForm;
+import dimigo.EternalStat.dto.chForm;
 import dimigo.EternalStat.domain.Tip;
 import dimigo.EternalStat.service.TipService;
-import dimigo.EternalStat.typeForm;
+import dimigo.EternalStat.dto.typeForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

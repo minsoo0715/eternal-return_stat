@@ -2,9 +2,9 @@ package dimigo.EternalStat.domain;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import dimigo.EternalStat.Avgchrank;
-import dimigo.EternalStat.Match;
-import dimigo.EternalStat.Most;
+import dimigo.EternalStat.dto.Avgchrank;
+import dimigo.EternalStat.dto.Match;
+import dimigo.EternalStat.dto.Most;
 
 import javax.persistence.*;
 import java.lang.reflect.Type;

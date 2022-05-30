@@ -1,6 +1,6 @@
 package dimigo.EternalStat.controller;
 
-import dimigo.EternalStat.StatForm;
+import dimigo.EternalStat.dto.StatForm;
 import dimigo.EternalStat.domain.User;
 import dimigo.EternalStat.service.StatService;
 import org.springframework.stereotype.Controller;

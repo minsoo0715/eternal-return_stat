@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 public class chForm { //캐릭터 검색을 위한 폼
     String ch;

@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 public class Avgchrank { //캐릭터 평균 데이터들을 보관하기 위한 클랫
     String chname;

@@ -2,7 +2,7 @@ package dimigo.EternalStat.service;
 
 import com.google.gson.GsonBuilder;
 import dimigo.EternalStat.domain.User;
-import dimigo.EternalStat.UserJson;
+import dimigo.EternalStat.dto.UserJson;
 import dimigo.EternalStat.repository.StatRepository;
 
 import java.io.BufferedReader;
@@ -12,7 +12,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Optional;
 
 import static org.springframework.http.HttpHeaders.USER_AGENT;

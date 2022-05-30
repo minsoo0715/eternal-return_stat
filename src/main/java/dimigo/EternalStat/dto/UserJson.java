@@ -1,4 +1,4 @@
-package dimigo.EternalStat;
+package dimigo.EternalStat.dto;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
